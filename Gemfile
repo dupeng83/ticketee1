@@ -32,12 +32,27 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'thor', '0.19.1'
 
+# gem "bootstrap-sass", "~> 3.3"
+# gem "font-awesome-rails", "~> 4.3"
+# gem "simple_form", "~> 3.1.0"
+gem "devise"
+# gem "pundit", "~> 0.3.0"
+# gem "searcher", github: "radar/searcher"
+# gem "active_model_serializers", "~> 0.9.3"
+
+# gem "carrierwave", "~> 0.10.0"
+# gem "fog", "~> 1.29.0"
+# gem "rails_12factor", group: :production
+# gem "puma", group: :production
+
+# gem "sinatra"
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
   gem 'rspec-rails', '~> 3.5'
-  gem "capybara"
+  # gem "capybara"
 end
 
 group :development do
@@ -49,13 +64,13 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# group :test do
-  # gem "capybara"
-  # gem "factory_girl_rails"
+group :test do
+  gem "capybara"
+  gem "factory_girl_rails"
   # gem "selenium-webdriver"
   # gem "database_cleaner"
   # gem "email_spec"
-# end
+end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
