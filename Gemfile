@@ -32,9 +32,9 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'thor', '0.19.1'
 
-# gem "bootstrap-sass", "~> 3.3"
-# gem "font-awesome-rails", "~> 4.3"
-# gem "simple_form", "~> 3.1.0"
+gem "bootstrap-sass"
+gem "font-awesome-rails"
+gem "simple_form"
 gem "devise"
 # gem "pundit", "~> 0.3.0"
 # gem "searcher", github: "radar/searcher"
