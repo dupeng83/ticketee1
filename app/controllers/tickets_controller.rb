@@ -4,17 +4,17 @@ class TicketsController < ApplicationController
 
   def new
     @ticket = @project.tickets.build
-    # debugger
   end
 
   def create
     @ticket = @project.tickets.build( ticket_params )
+    @ticket.author = current_user
 
     if @ticket.save
       flash[:notice] = "Ticket has been created."
       redirect_to [@project, @ticket]
     else
-      flash[:alert] = "Ticket has not been created."
+      flash.now[:alert] = "Ticket has not been created."
       render "new"
     end
   end
