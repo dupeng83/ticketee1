@@ -56,6 +56,9 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 
   # Add Warden as r4ia p158 required
-  config.include Warden::Test::Helpers, type: :feature
-  config.after(type: :feature) { Warden.test_reset! }
+  # config.include Warden::Test::Helpers, type: :feature
+  # config.after(type: :feature) { Warden.test_reset! }
+
+  config.include Devise::Test::ControllerHelpers, type: :controller
+  config.include Devise::Test::IntegrationHelpers, type: :feature
 end

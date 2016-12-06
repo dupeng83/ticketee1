@@ -4,7 +4,7 @@ RSpec.feature "Signed-in users can sign out" do
   let!(:user) { FactoryGirl.create(:user) }
 
   before do
-    login_as(user)
+    sign_in(user)
   end
 
   scenario do
