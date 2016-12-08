@@ -11,7 +11,14 @@ class User < ApplicationRecord
   end
 
   def archive
-    self.archived_at = Time.now
-    self.save
+    self.update(archived_at: Time.now)
+  end
+
+  def active_for_authentication?
+    super && archived_at.nil?
+  end
+
+  def inactive_message
+    archived_at.nil? ? super : :archived
   end
 end
