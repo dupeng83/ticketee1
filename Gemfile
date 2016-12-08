@@ -36,11 +36,11 @@ gem "bootstrap-sass"
 gem "font-awesome-rails"
 gem "simple_form"
 gem "devise"
-# gem "pundit", "~> 0.3.0"
+gem "pundit"
 # gem "searcher", github: "radar/searcher"
-# gem "active_model_serializers", "~> 0.9.3"
+gem "active_model_serializers"
 
-# gem "carrierwave", "~> 0.10.0"
+gem "carrierwave"
 # gem "fog", "~> 1.29.0"
 # gem "rails_12factor", group: :production
 # gem "puma", group: :production
@@ -51,7 +51,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails'
   # gem "capybara"
 end
 
@@ -67,9 +67,9 @@ end
 group :test do
   gem "capybara"
   gem "factory_girl_rails"
-  # gem "selenium-webdriver"
-  # gem "database_cleaner"
-  # gem "email_spec"
+  gem "selenium-webdriver"
+  gem "database_cleaner"
+  gem "email_spec"
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
