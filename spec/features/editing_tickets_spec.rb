@@ -8,6 +8,9 @@ RSpec.feature "Users can edit existing tickets" do
   end
 
   background do
+    assign_role!(author, :viewer, project)
+    sign_in(author)
+
     visit project_ticket_path(project, ticket)
     click_link "Edit Ticket"
   end
