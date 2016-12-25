@@ -26,12 +26,13 @@ class TicketsController < ApplicationController
   end
 
   def edit
+    authorize @ticket
   end
 
   def update
     # @ticket = @project.tickets.build( ticket_params )
     # @ticket = @project.tickets.find( params[:id] )
-
+    authorize @ticket
     if @ticket.update(ticket_params)
       flash[:notice] = "Ticket has been updated."
       redirect_to [@project, @ticket]
