@@ -8,8 +8,8 @@ RSpec.feature "Users can delete tickets" do
   end
 
   before do
-    login_as(author)
-    assign_role!(author, :viewer, project)
+    sign_in(author)
+    assign_role!(author, :manager, project)
     visit project_ticket_path(project, ticket)
   end
 

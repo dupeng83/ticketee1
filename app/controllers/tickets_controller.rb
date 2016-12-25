@@ -44,7 +44,7 @@ class TicketsController < ApplicationController
 
   def destroy
     # @ticket = @project.tickets.find( params[:id] )
-
+    authorize @ticket
     @ticket.destroy
     flash[:notice] = "Ticket has been deleted."
 
