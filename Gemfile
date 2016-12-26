@@ -30,7 +30,7 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'thor', '0.19.1'
+# gem 'thor', '0.19.1'
 
 gem "bootstrap-sass"
 gem "font-awesome-rails"
