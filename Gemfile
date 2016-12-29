@@ -53,6 +53,8 @@ group :development, :test do
 
   gem 'rspec-rails'
   # gem "capybara"
+
+  gem "chromedriver-helper"
 end
 
 group :development do
