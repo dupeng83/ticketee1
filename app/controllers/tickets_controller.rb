@@ -24,6 +24,7 @@ class TicketsController < ApplicationController
 
   def show
     authorize @ticket
+    @comment = @ticket.comments.build
   end
 
   def edit
