@@ -11,6 +11,13 @@
   <%= csrf_meta_tags %>
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
+  <style>
+    <% State.all.each do |state| %>
+      .state-<%= state.name.parameterize %> {
+        background-color: <%= state.color %>;
+      }
+    <% end %>
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
