@@ -32,8 +32,6 @@ class TicketsController < ApplicationController
   end
 
   def update
-    # @ticket = @project.tickets.build( ticket_params )
-    # @ticket = @project.tickets.find( params[:id] )
     authorize @ticket
     if @ticket.update(ticket_params)
       flash[:notice] = "Ticket has been updated."
@@ -45,7 +43,6 @@ class TicketsController < ApplicationController
   end
 
   def destroy
-    # @ticket = @project.tickets.find( params[:id] )
     authorize @ticket
     @ticket.destroy
     flash[:notice] = "Ticket has been deleted."
