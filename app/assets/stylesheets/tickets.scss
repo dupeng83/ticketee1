@@ -28,7 +28,7 @@ blockquote.comment p {
   padding: 0.3em 0.6em;
 }
 
-#tickets li {
+#tickets li, #states li {
   padding-bottom: 10px;
 }
 
@@ -46,5 +46,32 @@ blockquote.comment p {
       margin-right: 0.5em;
       text-decoration: none;
     }
+  }
+}
+
+.watch, .unwatch {
+  @extend .btn;
+  @extend .btn-xs;
+  font-weight: bold;
+
+  &:before {
+    font-family: "FontAwesome";
+    padding-right: 0.5em;
+  }
+}
+
+.watch {
+  @extend .btn-success;
+
+  &:before {
+    @extend .fa-eye;
+  }
+}
+
+.unwatch {
+  @extend .btn-danger;
+
+  &:before {
+    @extend .fa-eye-slash;
   }
 }
